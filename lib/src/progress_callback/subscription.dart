@@ -4,6 +4,7 @@ import 'dart:ui';
 
 class ObservableBuilder<T> {
   StreamController<T> _observable = StreamController();
+  Stream<T> get stream => _observable.stream;
   bool notSubscribed = true;
 
   void next(T value) {
